@@ -3,3 +3,17 @@ To update Github
 git add .
 git commit -m "Text"
 git push
+
+--------------------------------------
+
+As a variable can store values, it will also be assigned a data type. This can affect the operations that have been applied to the variable within a program.
+
+e.g.
+
+total = 10 #interger
+
+total = 10.5 #float
+
+total = True #boolean
+
+total = "10.5" #string
