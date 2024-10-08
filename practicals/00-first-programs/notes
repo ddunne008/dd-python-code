@@ -1,0 +1,5 @@
+To update Github
+
+git add .
+git commit -m "Text"
+git push
