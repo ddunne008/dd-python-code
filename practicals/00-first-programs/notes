@@ -17,3 +17,13 @@ total = 10.5 #float
 total = True #boolean
 
 total = "10.5" #string
+
+----------------------------------------
+
+len is used to calculate the length of a string value
+
+-----------------------------------------
+
+arguments are passed to functions when they are running
+
+-----------------------------------------
