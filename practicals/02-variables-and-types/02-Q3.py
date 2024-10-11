@@ -8,5 +8,5 @@ amount_of_groups = (students // group_size)
 remaining_students = students % group_size
 
 if remaining_students ==0:
-    print(f"There are {amount_of_groups} groups of students")
-    print(f"There are {remaining_students} remaining students")
+    print(f"there are {amount_of_groups} groups of students")
+    print(f"there are {remaining_students} remaining students who are not in a group")
