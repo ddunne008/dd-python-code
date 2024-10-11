@@ -1,2 +1,6 @@
+#Q2
 C = input("Enter a temperature in Celsius: ")
-print(C - 32)
+C = float(C)
+F = C * 1.8 + 32
+
+print(C, "Is the equivalent to:", F, "Fahrenheit")

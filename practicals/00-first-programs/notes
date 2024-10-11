@@ -18,6 +18,7 @@ total = True #boolean
 
 total = "10.5" #string
 
+Data types cannot be added together unless they are the same
 ----------------------------------------
 
 len is used to calculate the length of a string value
