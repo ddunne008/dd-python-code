@@ -14,7 +14,7 @@ total = 10 #interger
 
 total = 10.5 #float
 
-total = True #boolean
+total = True or False #boolean
 
 total = "10.5" #string
 
