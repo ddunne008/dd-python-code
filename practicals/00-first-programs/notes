@@ -34,3 +34,7 @@ Indexing can count the characters along a string
 -------------------------------------------
 
 if example == "" (This can mean if the user types nothing it is valid)
+
+-----------------------------------------
+
+A loop such as while true can be used to keep a program running. (Keywords: while, continue, break)

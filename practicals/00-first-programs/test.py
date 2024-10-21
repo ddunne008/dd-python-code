@@ -1,4 +1,2 @@
-for x in range(1,10):
-    for y in range (1,x):
-        print("*")
-    print()
+for a in range(20):
+    print(f"{a} * 10 = {a * 10}")
