@@ -28,3 +28,9 @@ len is used to calculate the length of a string value
 Arguments are passed to functions when they are running
 
 -----------------------------------------
+
+Indexing can count the characters along a string
+
+-------------------------------------------
+
+if example == "" (This can mean if the user types nothing it is valid)
