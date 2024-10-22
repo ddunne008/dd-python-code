@@ -36,10 +36,14 @@ Indexing can count the characters along a string
 if example == "" (This can mean if the user types nothing it is valid)
 
 -----------------------------------------
+defining a function using def
 
+calling a function uses the function name then when to end it, add the function name at the end e.g. my_function()
+--------------------------------------------------
 A loop such as while true can be used to keep a program running. (Keywords: while, continue, break)
 
 --------------------------------------------
 .py is the file extension for python files
 
 Using a command terminal, to open a python file, type: python filename.py
+
