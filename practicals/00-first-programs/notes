@@ -48,6 +48,11 @@ def showMessage():
 
 showMessage()
 
+Formal parameters act similar to local variables. It can only be accessed within the specific code block.
+
+return statement is used to return the values that have been entered back, similar to a reset. This can be useful for multiple use of a program
+
+Default argument
 --------------------------------------------------
 A loop such as while true can be used to keep a program running. (Keywords: while, continue, break)
 
