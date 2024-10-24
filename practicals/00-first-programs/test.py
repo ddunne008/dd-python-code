@@ -1,9 +1,16 @@
-def print_header(msg):
+# Example of defining a function
 
-    print(f"Hello", msg)
+def printHeader(msg): # This formats the functions so it knows what to do
+    print("*****", msg)
 
-print_header()
+printHeader()
 
+
+printHeader("Hello there!")
+printHeader("Welcome")
+printHeader("To")
+printHeader("The")
+printHeader("System!")
 
 
 
