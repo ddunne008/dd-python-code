@@ -1,13 +1,10 @@
-def print_header(msg):
-    """
-    A docstring can be used for making code more understandable as it can provide a quick reference or description
-    is uses triple quotes too
-    Args:
-    msg (str): The message to print
+def find_min(a, b):
+    return a if a < b else b
 
-    Returns:
-    None
-    """
-    print("*****", msg)
 
-print(print_header.__doc__) # This can be used to print out what is in the docstring
+no1 = input("Enter a number: ")
+no2 = input("Enter a second number: ")
+answer = find_min(no1, no2)
+
+print("The smallest number is", answer)
+
