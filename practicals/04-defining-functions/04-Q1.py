@@ -1,5 +1,4 @@
 def validate(number):
-    if number <= 0 and number >= 100:
-        return bool(number)
+    return 0 <= number <= 100
 
 print(validate(int(input("Enter a number: "))))
