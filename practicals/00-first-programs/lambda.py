@@ -1,2 +1,3 @@
-calculate = lambda a: a / 2
-print(calculate(10))
+a = int(input("Enter a number: "))
+cube = lambda c: c ** 3
+print(cube(a))
