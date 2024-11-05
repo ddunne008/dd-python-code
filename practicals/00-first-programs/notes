@@ -4,6 +4,12 @@ git add .
 git commit -m "Text"
 git push
 
+
+--------------------------------------------------
+
+6th Jan is last date to commit, add in exam read me
+
+
 --------------------------------------
 
 As a variable can store values, it will also be assigned a data type. This can affect the operations that have been applied to the variable within a program.
