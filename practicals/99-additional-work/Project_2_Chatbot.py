@@ -3,7 +3,7 @@ import random
 #The Agents list contains a list of names who are representing as Agents within the Chatbot system
 Agents = ["Martha", "Sarah","Dean","Alex","Joseph","Dylan"]
 
-def Close_program(exit)
+def Close_program(exit):
     if terminal == "exit" or "quit" or "leave" or "stop"
 
 
