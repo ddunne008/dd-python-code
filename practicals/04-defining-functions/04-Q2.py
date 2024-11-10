@@ -14,6 +14,6 @@ def no_of_uppercase_letters(word):
     uppercase_count = sum(1 for char in word if char in uppercase_letters)
     return uppercase_count
 
-#This part of the program prompts the user to enter a word of their choice, it will then use the above functions to calcualte the amount of uppercase and lowercase letters from that word!
+#This part of the program prompts the user to enter a word of their choice, it will then use the above functions to calculate the amount of uppercase and lowercase letters from that word!
 word = input("Enter a word of your choice!: ")
 print("There are", no_of_lowercase_letters(word), "lower-case letters and", no_of_uppercase_letters(word), "upper-case letters in", (word))

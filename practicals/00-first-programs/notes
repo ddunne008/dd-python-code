@@ -83,4 +83,6 @@ actual parameter is the specific value passed to the function when it is called
 
 e.g. greet("Alice")
 
-Alice is the actual argument
+----------------------------------------------
+
+isupper(), islower(),
