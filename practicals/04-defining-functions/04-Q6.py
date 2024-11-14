@@ -1,14 +1,13 @@
 def celcius_fahrenheit(temperature):
-    if (temperature) == 'C':
-        celcius = (temperature[:-1])
-        float(celcius)
-        celcius * (9/5) + 32
-    elif (temperature) != 'C':
-        print("The temperature must be formatted with a C")
+    celcius = (temperature[:-1])
+    int(celcius)
+    celcius * (9/5) + 32
+    return celcius
 
 
 
 
-temperature = input(str("Enter the temperature in Celcius: "))
-celcius = celcius_fahrenheit(temperature)
-print(temperature, "Translates to the temperature in fahrenheit as:", celcius )
+
+temperature = input("Enter the temperature in Celcius: ")
+answer = celcius_fahrenheit(temperature)
+print(temperature, "Translates to the temperature in fahrenheit as:", answer)
