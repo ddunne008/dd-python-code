@@ -8,6 +8,6 @@ def celcius_fahrenheit(temperature):
 
 
 
-temperature = input("Enter the temperature in Celcius: ")
-answer = celcius_fahrenheit(temperature)
-print(temperature, "Translates to the temperature in fahrenheit as:", answer)
+a = input("Enter the temperature in Celcius: ")
+answer = celcius_fahrenheit(a)
+print(a, "Translates to the temperature in fahrenheit as:", answer)
