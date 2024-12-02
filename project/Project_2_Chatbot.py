@@ -12,7 +12,7 @@ def Close_program(exit):
 #This is the first part of the chatbot system which will display a welcome to the chatbot
 print("****Welcome to the University of Poppleton Chatbot System!*****")
 username = input("What is your name: ")
-print("Hello", username,"Good to meet you, give me one moment whilst I connect you to a Agent")
+print("Hello", username,"Good to meet you, give me one moment whilst I connect you to an agent")
 
 
 terminal = input("Hello", username,"Agent", agent, "is connected")
