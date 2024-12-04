@@ -1,5 +1,5 @@
 new_password = input("Enter a new password: ")
-check_password = input("Re-Enter the password: ")
+check_password = input("Re-enter the password: ")
 
 new_password = str(new_password)
 check_password = str(check_password)
