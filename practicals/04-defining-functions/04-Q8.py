@@ -1,32 +1,24 @@
-temperatures = []
-def enter_temp(a):
-    while True:
-        temperatures = input("Enter temperatures: ")
-        if temperatures == "":
-            return temperatures
-        else:
-            break
+global temperatures
 
-def max_calc():
-    max_temp = max(temperatures)
-    return
-
-def min_calc():
-    min_temp = min(temperatures)
-    return
-
-def mean_calc():
-    mean_temp = int(sum(temperatures) / len(temperatures))
-    return
-
-if temperature:
-    a = max_calc()
-    b = min_calc()
-    c = mean_calc()
-
-temperatures = enter_temp(temperatures)
+def main():
+    temperatures = input("Enter the temperatures: ")
+    temperatures.replace('.', '', 1)
 
 
-print("The Minimum Temperature is: ", b, "C")
-print("The Maximum temperature is: ", a, "C")
-print("The Mean Temperature is: ", c, "C")
+def max_calc(a):
+    max_temp = max(a)
+    return max_temp
+
+def min_calc(b):
+    min_temp = min(b)
+    return min_temp
+
+def mean_calc(c):
+    mean_temp = sum(c) / len(c)
+    return mean_temp
+
+main()
+
+print("The Minimum Temperature is: ", min_calc(temperatures) , "C")
+print("The Maximum temperature is: ", max_calc(temperatures) , "C")
+print("The Mean Temperature is: ", mean_calc(temperatures) , "C")
