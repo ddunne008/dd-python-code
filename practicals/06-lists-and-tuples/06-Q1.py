@@ -1,8 +1,7 @@
-temps = [32, 46, 95, 10, 50]
-answer = input("Enter value here: ")
-answer = int(answer)
-temps.append(answer)
-temps.reverse()
+def convert_binary(n):
+    if n <= 0:
+        print("The number must be a positive number")
+    else:
+        return bin(n)[2:]
 
-print(temps.index(95))
-print(temps.count(95))
+print(convert_binary(192))
