@@ -1,11 +1,11 @@
-message_list = []
 
 message = input("Enter a message to encrypt: ")
-message_list.append(message)
+message = list(message)
+message.append(message)
 
-if message == "":
-    message_list.remove(" ")
 
-message_list.reverse()
+while " " in message:
+    message.remove(" ")
 
-print(message_list)
+message.reverse()
+print("Encrypted Message: ", message)
