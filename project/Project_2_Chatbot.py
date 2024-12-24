@@ -81,7 +81,7 @@ def civil_engineering_course():
     print("************************")
 
 def campus_cafe_info():
-    print(agent,">>> The Campus Cafe, also known as poppies, serves a variety of coffe, tea and homemade smoothies. We are a big believer in recycling and doing our part for mother nature, We are open Monday - Saturday, 8am - 16:30pm everyday")
+    print(agent,">>> The Campus Cafe, also known as poppies, serves a variety of coffe, tea and homemade smoothies with many snacks! We are a big believer in recycling and doing our part for mother nature, We are open Monday - Saturday, 8am - 16:30pm everyday")
 #This is the first part of the chatbot system which will display a welcome to the chatbot
 print("****Welcome to the University of Poppleton Chatbot System!*****")
 print("Current Time:", datetime.datetime.now())
@@ -105,11 +105,7 @@ def main_screen(terminal): #This is the first screen the user will see
         print(agent,">>> Enjoy the rest of your day!")
         quit() #This code will stop the program when the user enters an exit word from the Stop_Words list
     if terminal == "":
-        if username == "Stranger":
-            print(agent,">>> Although I asked before, Im sure it would be better if I address you as your real name?")
-            username = input(agent," >>> What is your name?: ")
-        else:
-            return main_screen(terminal)
+        return main_screen(terminal)
     if terminal in Campus_Cafe_Words:
         campus_cafe_info()
         return main_screen(terminal)
