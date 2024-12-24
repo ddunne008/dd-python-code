@@ -7,6 +7,9 @@ Stop_words = ["exit", "Exit", "Quit", "quit", "Bye", "bye", "Stop", "stop"] #Thi
 Course_queries = ["what courses are available?", "What courses are available", "show me courses available"] #This is a list of keywords about course queries
 Courses_available = ["Marketing", "IT in Business", "Cyber Security", "Sport Science", "Sport Coaching", "Basket Weaving", "Project Management", "Civil Engineering"] #This is a list of courses that are available
 Campus_Cafe_Words = ["campus cafe", "Campus Cafe", "Poppies", "poppies", "is there a cafe on campus", "Is there a cafe on campus", "is there a cafe on campus?"]
+EE_1 = ["Who made this", "who made this", "Who made this Program", "Who made this program?", "who is your creator", "who is your creator?"]
+EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something a dont know"]
+EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done!", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"]
 
 def marketing_course():
     print(agent,">>> Here is the details about the Marketing Course we offer")
@@ -82,6 +85,8 @@ def civil_engineering_course():
 
 def campus_cafe_info():
     print(agent,">>> The Campus Cafe, also known as poppies, serves a variety of coffe, tea and homemade smoothies with many snacks! We are a big believer in recycling and doing our part for mother nature, We are open Monday - Saturday, 8am - 16:30pm everyday")
+
+
 #This is the first part of the chatbot system which will display a welcome to the chatbot
 print("****Welcome to the University of Poppleton Chatbot System!*****")
 print("Current Time:", datetime.datetime.now())
@@ -90,8 +95,8 @@ if username == "":
     username = "Stranger"
 print("SYSTEM >>> Hello", username,", Good to meet you, give me one moment whilst you are connecting to an agent")
 
-#This slows down the process to give the system a realistic feel
-time.sleep(3.5)
+
+time.sleep(3.5) #This slows down the program to give a realistic suspense
 
 
 agent = random.choice(Agents) #This assigns a random agent name from the Agents list
@@ -111,28 +116,37 @@ def main_screen(terminal): #This is the first screen the user will see
         return main_screen(terminal)
     if terminal in Course_queries:
         print(agent,">>> Yes, The courses that are available this year are: ", Courses_available, "If you want more Information about a course type in the course tittle")
-        if terminal in Courses_available:
-            if terminal == "Marketing":
-                marketing_course()
-                return main_screen(terminal)
-            if terminal == "IT in Business":
-                it_business_course()
-                return main_screen(terminal)
-            if terminal == "Cyber Security":
-                cyber_security_course()
-                return main_screen(terminal)
-            if terminal == "Sport Science":
-                sport_science_course()
-                return main_screen(terminal)
-            if terminal == "Basket Weaving":
-                basket_weaving_course()
-                return main_screen(terminal)
-            if terminal == "Project Management":
-                project_management_course()
-                return main_screen(terminal)
-            if terminal == "Civil Engineering":
-                civil_engineering_course()
-                return main_screen(terminal)
+        return main_screen(terminal)
+    if terminal in Courses_available:
+        if terminal == "Marketing":
+            marketing_course()
+            return main_screen(terminal)
+        if terminal == "IT in Business":
+            it_business_course()
+            return main_screen(terminal)
+        if terminal == "Cyber Security":
+            cyber_security_course()
+            return main_screen(terminal)
+        if terminal == "Sport Science":
+            sport_science_course()
+            return main_screen(terminal)
+        if terminal == "Basket Weaving":
+            basket_weaving_course()
+            return main_screen(terminal)
+        if terminal == "Project Management":
+            project_management_course()
+            return main_screen(terminal)
+        if terminal == "Civil Engineering":
+            civil_engineering_course()
+            return main_screen(terminal)
+
+        if terminal in EE_1:
+            print(agent,">>> Yes, The creator of this program was made by Daniel Dunne, A student at LBU, Although im not sure why hes made a coding project for another rival university...")
+            return main_screen(terminal)
+        if terminal in EE_2:
+            answer = random.choice(EE_2_answers)
+            print(agent,">>> Sure", answer)
+            return main_screen(terminal)
         else:
             print(agent,">>> Im sorry I dont understand what your looking for, Maybe re-type the question again or in more detail and I can help more")
             return main_screen(terminal)
