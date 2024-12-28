@@ -2,14 +2,22 @@ import random
 import time
 import datetime
 
+
 Agents = ["Martha", "Sarah","Dean","Alex","Joseph","Dylan", "Carlos", "Amelia", "Eden"] #This contains a list of Agents in the system
 Stop_words = ["exit", "Exit", "Quit", "quit", "Bye", "bye", "Stop", "stop"] #This is a list of stop words which will terminate the program
 Course_queries = ["what courses are available?", "What courses are available", "show me courses available"] #This is a list of keywords about course queries
 Courses_available = ["Marketing", "IT in Business", "Cyber Security", "Sport Science", "Sport Coaching", "Basket Weaving", "Project Management", "Civil Engineering"] #This is a list of courses that are available
-Campus_Cafe_Words = ["campus cafe", "Campus Cafe", "Poppies", "poppies", "is there a cafe on campus", "Is there a cafe on campus", "is there a cafe on campus?"]
-EE_1 = ["Who made this", "who made this", "Who made this Program", "Who made this program?", "who is your creator", "who is your creator?"]
-EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something a dont know"]
-EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done!", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"]
+Campus_Cafe_Words = ["campus cafe", "Campus Cafe", "Poppies", "poppies", "is there a cafe on campus", "Is there a cafe on campus", "is there a cafe on campus?"] #This is a list of keywords about the campus cafe
+EE_1 = ["Who made this", "who made this", "Who made this Program", "Who made this program?", "who is your creator", "who is your creator?"] #This is a list of keywords about an Easter egg within the program
+EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something a dont know"] #This is a list which will print fun facts for the user
+EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done!", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"] #This is a list which prints to the user
+
+def generate_id():
+    agent_no = agent[1]
+    user_no = username[1]
+    random_no = random.randint(100, 1000)
+    chat_id = agent_no + user_no + random_no
+    return
 
 def marketing_course():
     print(agent,">>> Here is the details about the Marketing Course we offer")
@@ -86,29 +94,11 @@ def civil_engineering_course():
 def campus_cafe_info():
     print(agent,">>> The Campus Cafe, also known as poppies, serves a variety of coffe, tea and homemade smoothies with many snacks! We are a big believer in recycling and doing our part for mother nature, We are open Monday - Saturday, 8am - 16:30pm everyday")
 
-
-#This is the first part of the chatbot system which will display a welcome to the chatbot
-print("****Welcome to the University of Poppleton Chatbot System!*****")
-print("Current Time:", datetime.datetime.now())
-username = input("SYSTEM >>> What is your name: ")
-if username == "":
-    username = "Stranger"
-print("SYSTEM >>> Hello", username,", Good to meet you, give me one moment whilst you are connecting to an agent")
-
-
-time.sleep(3.5) #This slows down the program to give a realistic suspense
-
-
-agent = random.choice(Agents) #This assigns a random agent name from the Agents list
-terminal = print("SYSTEM >>> Hello", username, ", Agent", agent, "is connected")
-print(agent,">>>", "Hey there,", username,",Nice to meet you! What can I help you with?")
-
-
 def main_screen(terminal): #This is the first screen the user will see
     terminal = input(">>> ")
     if terminal in Stop_words:
         print(agent,">>> Enjoy the rest of your day!")
-        quit() #This code will stop the program when the user enters an exit word from the Stop_Words list
+        quit() #This code will stop the program when the user enters an exit word from the stop_words list
     if terminal == "":
         return main_screen(terminal)
     if terminal in Campus_Cafe_Words:
@@ -148,8 +138,27 @@ def main_screen(terminal): #This is the first screen the user will see
             print(agent,">>> Sure", answer)
             return main_screen(terminal)
         else:
-            print(agent,">>> Im sorry I dont understand what your looking for, Maybe re-type the question again or in more detail and I can help more")
+            print(agent,">>> Im sorry, I dont understand what your looking for, Maybe re-type the question again or in more detail and I can help more")
             return main_screen(terminal)
+
+#This is the first part of the chatbot system which will display a welcome to the chatbot
+print("****Welcome to the University of Poppleton Chatbot System!*****")
+print("Current Time:", datetime.datetime.now())
+username = input("SYSTEM >>> What is your name: ")
+if username == "":
+    username = "Stranger"
+print("SYSTEM >>> Hello", username,"Good to meet you, give me one moment whilst you are connecting to an agent")
+
+
+time.sleep(3.5) #This slows down the program to give a realistic suspense
+
+
+agent = random.choice(Agents) #This assigns a random agent name from the Agents list
+terminal = print("SYSTEM >>> Hello", username, ", Agent:", agent, "is connected")
+print(agent,">>>", "Hey there,", username,"Nice to meet you! What can I help you with?")
+
+
+
 
 main_screen(terminal)
 
