@@ -12,12 +12,6 @@ EE_1 = ["Who made this", "who made this", "Who made this Program", "Who made thi
 EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something a dont know"] #This is a list which will print fun facts for the user
 EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done!", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"] #This is a list which prints to the user
 
-def generate_id():
-    agent_no = agent[1]
-    user_no = username[1]
-    random_no = random.randint(100, 1000)
-    chat_id = agent_no + user_no + random_no
-    return
 
 def marketing_course():
     print(agent,">>> Here is the details about the Marketing Course we offer")
@@ -156,9 +150,13 @@ time.sleep(3.5) #This slows down the program to give a realistic suspense
 agent = random.choice(Agents) #This assigns a random agent name from the Agents list
 terminal = print("SYSTEM >>> Hello", username, ", Agent:", agent, "is connected")
 print(agent,">>>", "Hey there,", username,"Nice to meet you! What can I help you with?")
-
-
-
+#This generates a unique chat ID which can be used for testing or back-end purposes within the project
+agent_no = agent[0]
+user_no = username[0]
+ran_no = random.randint(100,1000) #The chat ID will take the first letter of the agent and usernames and then generate a random number between 100 and 1000
+ran_no = str(ran_no) #This converts the random integer to a string so it can be combined with the code below
+chat_id = agent_no + user_no + ran_no
+print("Chat ID: ",chat_id)
 
 main_screen(terminal)
 
