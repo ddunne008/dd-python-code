@@ -1,7 +1,10 @@
 import random
 import time
 import datetime
+import json
 
+with open("keywords.json", "r") as keyword_file:
+    keywords = json.load(keyword_file)
 
 Agents = ["Martha", "Sarah","Dean","Alex","Joseph","Dylan", "Carlos", "Amelia", "Eden"] #This contains a list of Agents in the system
 Stop_words = ["exit", "Exit", "Quit", "quit", "Bye", "bye", "Stop", "stop"] #This is a list of stop words which will terminate the program
@@ -9,7 +12,7 @@ Course_queries = ["what courses are available?", "What courses are available", "
 Courses_available = ["Marketing", "IT in Business", "Cyber Security", "Sport Science", "Sport Coaching", "Basket Weaving", "Project Management", "Civil Engineering"] #This is a list of courses that are available
 Campus_Cafe_Words = ["campus cafe", "Campus Cafe", "Poppies", "poppies", "is there a cafe on campus", "Is there a cafe on campus", "is there a cafe on campus?"] #This is a list of keywords about the campus cafe
 EE_1 = ["Who made this", "who made this", "Who made this Program", "Who made this program?", "who is your creator", "who is your creator?"] #This is a list of keywords about an Easter egg within the program
-EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something a dont know"] #This is a list which will print fun facts for the user
+EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something i dont know"] #This is a list which will print fun facts for the user
 EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done!", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"] #This is a list which prints to the user
 
 
@@ -123,17 +126,20 @@ def main_screen(terminal): #This is the first screen the user will see
         if terminal == "Civil Engineering":
             civil_engineering_course()
             return main_screen(terminal)
-
-        if terminal in EE_1:
-            print(agent,">>> Yes, The creator of this program was made by Daniel Dunne, A student at LBU, Although im not sure why hes made a coding project for another rival university...")
-            return main_screen(terminal)
-        if terminal in EE_2:
-            answer = random.choice(EE_2_answers)
-            print(agent,">>> Sure", answer)
-            return main_screen(terminal)
         else:
-            print(agent,">>> Im sorry, I dont understand what your looking for, Maybe re-type the question again or in more detail and I can help more")
+            print(agent,">>> Im not sure which course you are looking for, please re-type the course name")
             return main_screen(terminal)
+
+    if terminal in EE_1:
+        print(agent,">>> Yes, The creator of this program was made by Daniel Dunne, A student at LBU, Although im not sure why hes made a coding project for another rival university...")
+        return main_screen(terminal)
+    if terminal in EE_2:
+        answer = random.choice(EE_2_answers)
+        print(agent,">>> Sure", answer)
+        return main_screen(terminal)
+    else:
+        print(agent,">>> Im sorry, I dont understand what your looking for, Maybe re-type the question again or in more detail and I can help more")
+        return main_screen(terminal)
 
 #This is the first part of the chatbot system which will display a welcome to the chatbot
 print("****Welcome to the University of Poppleton Chatbot System!*****")
