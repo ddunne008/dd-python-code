@@ -2,6 +2,8 @@
 
 Use this folder for your project work.
 
-Remember that you can submit a basic attempt at both projects (in which case they should obviously be in separate folders), or a more fully featured version of just one.
+This is a project from the assignment specifications from Project 2.
 
-*You may want to replace the contents of this ``README.md`` with a description of your project work.*
+I have created a Chat bot system which can answer a users questions about the University of Poppleton!
+
+Some criteria has been met on the top marks specification but the keywords.json is a Work In Progress although I have listed possible phrases and actions that will be said on the program
