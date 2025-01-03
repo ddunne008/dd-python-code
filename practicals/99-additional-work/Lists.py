@@ -1,5 +1,5 @@
 temps = [32, 46, 95, 10, 50]
-answer = input("Enter value here: ")
+answer = input("Enter the value here: ")
 answer = int(answer)
 temps.append(answer)
 temps.reverse()

@@ -1,5 +1,5 @@
 #This program greets the user and prompts the user to enter its name
-#It will firstly, change the first letter of the name into a uppcase even if it is already using indexing
+#It will firstly, change the first letter of the name into an uppcase even if it is already using indexing
 #Secondly the program will change the next letter along and the rest of the characters to lowercase
 
 

@@ -1,3 +1,4 @@
+# Question 4 is a program which checks the http status of a URL.
 import requests
 import sys
 

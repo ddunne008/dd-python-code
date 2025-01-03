@@ -1,3 +1,4 @@
+# Question 5  is a program which loops allowing the user to use the program over and over again until a password is set
 Bad_Passwords = ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
 
 while True:

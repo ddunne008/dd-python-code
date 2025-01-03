@@ -1,4 +1,4 @@
-#This program counts the amount of uppercase and lowercase characters within a word that the user inputs
+#This program counts the amount of uppercase and lowercase characters within a word that the user inputs.
 
 #This function overall calculates the amount of lowercase letters within the inputted word.
 #It searches through a set of lowercase letters, counts the total from the inputted word and returns it

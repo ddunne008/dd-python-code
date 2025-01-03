@@ -1,4 +1,4 @@
-#This program contains a function which shortens the name which has been typed in using slicing
+#This program contains a function which shortens the name which has been typed in using slicing.
 #If the name is less than 1 character, it will print the name anyway
 def count_letters(name):
     if len(name) > 1:

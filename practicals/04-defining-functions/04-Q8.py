@@ -1,8 +1,8 @@
-global temperatures
+# Question 8 calculates the minimum, maximum and mean temperatures. It also filters spaces between nultiple temperatures
 
-def main():
-    temperatures = input("Enter the temperatures: ")
-    temperatures.replace('.', '', 1)
+# WIP, It only currently prints the Maximum temperature will need further improvements
+temperatures = input("Enter the temperatures: ")
+temperatures.replace('.', '', 1)
 
 
 def max_calc(a):
@@ -14,10 +14,10 @@ def min_calc(b):
     return min_temp
 
 def mean_calc(c):
+    c = int(c)
     mean_temp = sum(c) / len(c)
     return mean_temp
 
-main()
 
 print("The Minimum Temperature is: ", min_calc(temperatures) , "C")
 print("The Maximum temperature is: ", max_calc(temperatures) , "C")

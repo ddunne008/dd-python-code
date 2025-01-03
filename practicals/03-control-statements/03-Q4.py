@@ -1,3 +1,4 @@
+# Question 4 is a program which checks the password entered is not a list of bad passwords
 Bad_Passwords = ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
 
 new_password = input("Enter a new password. It must contain between 8 to 12 characters: ")

@@ -1,3 +1,4 @@
+# Question 3 checks if the password entered is between 8 and 12 characters
 new_password = input("Enter a new password. It must contain between 8 to 12 characters: ")
 check_password = input("Re-Enter the password: ")
 

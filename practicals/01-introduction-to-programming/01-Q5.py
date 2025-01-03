@@ -1,4 +1,4 @@
-#Question 5, this program calculates how many students can be assigned into a group
+# Question 5, this program calculates how many students can be assigned into a group
 
 #1 lab group contains 24 students
 

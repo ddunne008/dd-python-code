@@ -1,3 +1,4 @@
+# Question 4 calculates how many students can equally receive a sweet
 amount_of_sweets = input("Enter the amount of sweets: ")
 amount_of_students = input("Enter the amount of students: ")
 

@@ -1,4 +1,4 @@
-#This program calculates Celcius to Fahrenheit and vice versa
+#This program calculates Celcius to Fahrenheit and vice versa.
 
 #This function calculates the Fahrenheit temperature to Celcius
 def convert_celcius(fahrenheit):

@@ -1,3 +1,4 @@
+# Question 6 is a program which calculates the times tables of a given number entered by the user
 times_table = int(input("Enter the times table number: "))
 
 

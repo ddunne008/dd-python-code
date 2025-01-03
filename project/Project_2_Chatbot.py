@@ -13,7 +13,7 @@ Courses_available = ["Marketing", "IT in Business", "Cyber Security", "Sport Sci
 Campus_Cafe_Words = ["campus cafe", "Campus Cafe", "Poppies", "poppies", "is there a cafe on campus", "Is there a cafe on campus", "is there a cafe on campus?"] #This is a list of keywords about the campus cafe
 EE_1 = ["Who made this", "who made this", "Who made this Program", "Who made this program?", "who is your creator", "who is your creator?"] #This is a list of keywords about an Easter egg within the program
 EE_2 = ["Tell me a fun fact", "fun fact", "Fun fact", "give me a fun fact", "tell me something i dont know"] #This is a list which will print fun facts for the user
-EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done!", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"] #This is a list which prints to the user
+EE_2_answers = ["Did you know that an Octopus has 3 hearts?", "If you close your eyes, you wont see this screen", "Counting from 0 - 100, the only time your lips touch is when you say 100", "This is the first Python Project Daniel has even done", "If a vampire cant see itself in a mirror, how do they have such good hairstyles?"] #This is a list which prints to the user
 
 
 def marketing_course():
@@ -102,7 +102,7 @@ def main_screen(terminal): #This is the first screen the user will see
         campus_cafe_info()
         return main_screen(terminal)
     if terminal in Course_queries:
-        print(agent,">>> Yes, The courses that are available this year are: ", Courses_available, "If you want more Information about a course type in the course tittle")
+        print(agent,">>> Yes", username, " The courses that are available this year are: ", Courses_available, "If you want more Information about a course type in the course tittle")
         return main_screen(terminal)
     if terminal in Courses_available:
         if terminal == "Marketing":
