@@ -2,6 +2,7 @@ miles = input("Enter the miles value: ")
 miles = int(miles)
 if miles < 0:
     print("The number should not be a negative number")
+    quit()
 
 kilometers = miles * 1.609
 
