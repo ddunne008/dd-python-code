@@ -1,4 +1,4 @@
-# This Python program displays a handy table which converts miles to kilometers from multiples of 5
+# This Python program displays a handy table which converts miles to kilometers from multiples of 5.
 
 print("Conversion Table of Miles to Kilometers")
 

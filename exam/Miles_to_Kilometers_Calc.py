@@ -7,6 +7,6 @@ if miles < 0:
     print("The number should not be a negative number")
     quit()
 
-kilometers = miles * 1.609 # This calculates meters to kilometers
+kilometers = miles * 1.609 # This calculates meters to kilometers.
 
 print(f"{miles} is equivalent to {kilometers} kilometers")

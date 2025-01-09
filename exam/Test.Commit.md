@@ -1,1 +1,1 @@
-This is a test commit to ensure that everything is in fully working order
+This is a test commit to ensure that everything is in fully working order.
